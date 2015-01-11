@@ -1,3 +1,12 @@
-# https://git-scm.com/docs/gitignore
-# https://help.github.com/articles/ignoring-files
-# Example .gitignore files: https://github.com/github/gitignore
+.sass-cache/
+node_modules/
+sass/
+
+
+#files
+Gruntfile.js
+css/base.css
+
+#uploadLink
+#git ftp push --user breakbwn --passwd 4!?9#E7wZ7Ic ftpes://breakthroughgroup.in/public_html.
+#pw aniketvishal123
