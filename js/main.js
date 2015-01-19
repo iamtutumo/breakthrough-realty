@@ -7,8 +7,8 @@ function askPassword(){
     }
 };
 $(document).ready(function(){
-    //$('#wrapper').hide();
-    //askPassword();
+    $('#wrapper').hide();
+    askPassword();
     $('.opaque').css('opacity','1');
     $('.carousel').carousel({
         interval: 3000,
