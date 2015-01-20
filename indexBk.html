@@ -14,25 +14,72 @@
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.smooth-scroll.js"></script>
+
+        <style>
+            .navbar-brand img{
+                width: 150px;
+            }
+            .navbar {
+                margin-bottom: 0px;
+                min-height: 100px; }
+            .navbar .container {
+                min-height: 100px;
+                height: 100%; }
+            .navbar .navbar-collapse {
+                min-height: 100px; }
+            .navbar .navbar-nav {
+                margin-right: 20px;
+                margin-top: 20px; }
+            .navbar-default .navbar-nav a{
+                padding: 7px;
+                margin: 10px;
+                border:1px solid #fff;
+                border-radius: 5px;
+            }
+            .navbar-default .navbar-nav a:hover{
+                border:1px solid orange;
+            }
+            .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover{
+                background-color: #fff;
+                color: #333;
+            }
+        </style>
     </head>
     <body>
         <div id="wrapper">
-            <div class="container-fluid">
-                <div class="row navigation">
-                    <div class="col-md-5">
-                        <img src="img/BTlogo1.png" alt="" class="logo-main">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="img/BTlogo1.png" alt=""></a>
                     </div>
-                    <div class="col-md-7">
-                        <ul class="nav-list">
-                            <li><a href="#about-row">About Us</a></li>
-                            <li><a href="director.html">Director</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
 
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#about-row">About Us</a></li>
+                            <li><a href="#">Director</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact Us <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Work With Us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+            <div class="container-fluid">
                 <div class="row cover-image">
                     <div class="col-md-6 col-md-offset-3 logotext text-center">
                         <img src="img/BTlogo1.png" alt="" class="logo-big">
