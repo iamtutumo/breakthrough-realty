@@ -40,8 +40,15 @@
                     </div>
                 </div>
             </div>
-
-
+            <div class="container-fluid testim-cont hide">
+                <div class="container testim">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, consectetur libero laboriosam animi possimus quisquam odit iusto deleniti expedita minus reprehenderit rem adipisci harum, maxime incidunt. Nam architecto perspiciatis, velit.
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="row" id="about-row">
                     <div class="col-md-12 text-center hideme">
@@ -92,7 +99,7 @@
                     <div class="container">
                         <div class="row magazine-section">
                             <div class="col-md-4 col-md-push-1">
-                                <img src="img/emag.jpg" alt="" style="width:250px;">
+                                <img src="img/sample1.jpg" alt="" style="width:250px;">
                             </div>
                             <div class="col-md-6 col-md-push-1 magazine-content">
                                 <h3>Breakthrough Realty</h3>
@@ -106,7 +113,7 @@
                                     Period: <strong>2015</strong> <br>
 
                                 </p>
-                                <p><a href="#" class="h4 edition-link">Click here for the latest edition!</a></p>
+                                <p><a href="#" class="h4 edition-link" data-toggle="modal" data-target="#modal1">Click here for the latest edition!</a></p>
                             </div>
                         </div>
                     </div>
@@ -121,15 +128,16 @@
                                 <span class="name">breakthrough</span> <br> <span class="rest">group of companies</span>
                             </p>
                             <p style="color:#777">&copy;2014 copyright</p>
+                            <p style="color:#777; text-transform: none;">In association with Pratham PR & Events</p>
                         </div>
                         <div class="col-md-4">
                             <h4>Important Links</h4>
                             <p style="margin-top:16px; font-size:15px;" class="hide" >Important Links</p>
                             <p class="links">
-                                • <a href="#"><span>E-Magazine</span></a> <br>
+                                • <a href="projects.html"><span>E-Magazine</span></a> <br>
                                 • <a href="#"><span>Careers</span></a> <br>
-                                • <a href="#"><span>About</span></a> <br>
-                                • <a href="#"><span>Contact</span></a> <br>
+                                • <a href="#about-row"><span>About</span></a> <br>
+                                • <a href="contact.html"><span>Contact</span></a> <br>
                             </p>
                         </div>
                         <div class="col-md-4 misc-text">
@@ -142,6 +150,23 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                    </div>
+                    <div class="modal-body text-center">
+                      <h3>Breakthrough Realty <br> is coming soon.</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="hide btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="hide btn btn-primary">Save changes</button>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="js/main.js"></script>
