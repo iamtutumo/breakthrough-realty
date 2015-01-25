@@ -16,88 +16,104 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/jquery.smooth-scroll.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row navigation">
-                <div class="col-md-5">
-                    <img src="img/BTlogo1.png" alt="" class="logo-main">
-                </div>
-                <div class="col-md-7">
-                    <ul class="nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html #about-row">About Us</a></li>
-                        <li><a href="director.html">Director</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="#" class="active">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <form id="ajax-contact" method="post" action="mailer.php">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required class="form-control input-sm">
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Company:</label>
-                            <input type="text" id="company" name="company" required class="form-control input-sm">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required class="form-control input-sm">
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Phone:</label>
-                            <input type="text" id="phone" name="phone" required class="form-control input-sm">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" required class="form-control input-sm"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-sm btn-warning">Submit Enquiry</button>
-                        </div>
-                    </form>
+        <div class="contact-wrapper">
+            <div class="container-fluid">
+                <div class="row navigation">
+                    <div class="col-md-5">
+                        <img src="img/BTlogo1.png" alt="" class="logo-main">
+                    </div>
+                    <div class="col-md-7">
+                        <ul class="nav-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html #about-row">About Us</a></li>
+                            <li><a href="director.html">Director</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="#" class="active">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div id="form-messages" style="background-color:orange; height:30px;" class="hide"></div>
-        </div>
-        <div class="container-fluid footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 copy-r">
-                        <h4>copyright</h4>
-                        <p class="footer-name">
-                            <span class="name">breakthrough</span> <br> <span class="rest">group of companies</span>
-                        </p>
-                        <p style="color:#777">&copy;2014 copyright</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Important Links</h4>
-                        <p style="margin-top:16px; font-size:15px;" class="hide" >Important Links</p>
-                        <p class="links">
-                            • <a href="#"><span>E-Magazine</span></a> <br>
-                            • <a href="#"><span>Careers</span></a> <br>
-                            • <a href="#"><span>About</span></a> <br>
-                            • <a href="#"><span>Contact</span></a> <br>
-                        </p>
-                    </div>
-                    <div class="col-md-4 misc-text">
-                        <h4>Advertise in Breakthrough Realty</h4>
-                        <p style="margin-top:16px; font-size:15px;" class="hide" >Important Links</p>
-                        <p class="links">
-                            Advertising in Breakthrough Realty is always a wonderful experience. <a href="#">Click to apply for Ads</a> to earn special client privileges, a bond that lasts and an assured way to reach millions of subscribers each year!
-                        </p>
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-7">
+                            <form id="ajax-contact" method="post" action="mail.php">
+                                <div class="form-group">
+                                    <label for="query">Enquiry Type:</label>
+                                    <select class="form-control" id="query">
+                                        <option>Careers</option>
+                                        <option>Billing Enquiry</option>
+                                        <option>Media Enquiry</option>
+                                        <option>Partnership Enquiry</option>
+                                        <option>Sales Enquiry</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required class="form-control input-sm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Company:</label>
+                                    <input type="text" id="company" name="company" required class="form-control input-sm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required class="form-control input-sm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Phone:</label>
+                                    <input type="text" id="phone" name="phone" required class="form-control input-sm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" required class="form-control input-sm"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-sm btn-warning">Submit Enquiry</button>
+                                </div>
+                                <div class="g-recaptcha" data-sitekey="6Le0-gATAAAAALxsFuaYwVTfLxx6v7651ByMBqq1"></div>
+                            </form>
+                        </div>
                     </div>
                 </div>
+                <div id="form-messages" style="background-color:orange; height:30px;" class=""></div>
             </div>
+            <div class="container-fluid footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 copy-r">
+                            <h4>copyright</h4>
+                            <p class="footer-name">
+                                <span class="name">breakthrough</span> <br> <span class="rest">group of companies</span>
+                            </p>
+                            <p style="color:#777">&copy;2014 copyright</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Important Links</h4>
+                            <p style="margin-top:16px; font-size:15px;" class="hide" >Important Links</p>
+                            <p class="links">
+                                • <a href="#"><span>E-Magazine</span></a> <br>
+                                • <a href="#"><span>Careers</span></a> <br>
+                                • <a href="#"><span>About</span></a> <br>
+                                • <a href="#"><span>Contact</span></a> <br>
+                            </p>
+                        </div>
+                        <div class="col-md-4 misc-text">
+                            <h4>Advertise in Breakthrough Realty</h4>
+                            <p style="margin-top:16px; font-size:15px;" class="hide" >Important Links</p>
+                            <p class="links">
+                                Advertising in Breakthrough Realty is always a wonderful experience. <a href="#">Click to apply for Ads</a> to earn special client privileges, a bond that lasts and an assured way to reach millions of subscribers each year!
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
         </div>
     </body>
 </html>
