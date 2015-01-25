@@ -7,5 +7,7 @@ $subject = "Contact Form";
 $mailheader = "From: $email \r\n";
 if(mail($recipient, $subject, $formcontent, $mailheader)){
     echo "Thank You!";
-} or die("Error!");
+} else{
+    echo "something went wrong";
+}
 ?>
