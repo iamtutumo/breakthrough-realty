@@ -24,7 +24,7 @@ Comments:	'.$_POST['comments'].'
     $mail->Encoding = '7bit';
 
     // Authentication
-    $mail->Username   = "shrikar.chonkar@gmail.com"; // Your full Gmail address
+    $mail->Username   = "shrikar.code@gmail.com"; // Your full Gmail address
     $mail->Password   = "tzinga6616"; // Your Gmail password
 
     // Compose
