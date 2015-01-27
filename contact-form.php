@@ -2,8 +2,8 @@
 if(isset($_POST['submit']))
 {
 
-$message=
-'Full Name:	'.$_POST['fullname'].'<br />
+    $message=
+        'Full Name:	'.$_POST['fullname'].'<br />
 Subject:	'.$_POST['subject'].'<br />
 Phone:	'.$_POST['phone'].'<br />
 Email:	'.$_POST['emailid'].'<br />
@@ -24,8 +24,8 @@ Comments:	'.$_POST['comments'].'
     $mail->Encoding = '7bit';
 
     // Authentication
-    $mail->Username   = "shrikarz@gmail.com"; // Your full Gmail address
-    $mail->Password   = "potato6616"; // Your Gmail password
+    $mail->Username   = "shrikar.chonkar@gmail.com"; // Your full Gmail address
+    $mail->Password   = "tzinga6616"; // Your Gmail password
 
     // Compose
     $mail->SetFrom($_POST['emailid'], $_POST['fullname']);
@@ -34,38 +34,40 @@ Comments:	'.$_POST['comments'].'
     $mail->MsgHTML($message);
 
     // Send To
-    $mail->AddAddress("shrikar.chonkar@gmail.com", "Recipient Name"); // Where to send it - Recipient
+    $mail->AddAddress("shrikarz@gmail.com", "Recipient Name"); // Where to send it - Recipient
     $result = $mail->Send();		// Send!
-	$message = $result ? 'Successfully Sent!' : 'Sending Failed!';
-	unset($mail);
+    $message = $result ? 'Successfully Sent!' : 'Sending Failed!';
+    unset($mail);
 
 }
 ?>
 <html>
-<head>
-  <title>Contact Form</title>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Contact Form</title>
+    </head>
+    <body>
 
-		<div style="margin: 100px auto 0;width: 300px;">
-			<h3>Contact Form</h3>
-			<form name="form1" id="form1" action="" method="post">
-					<fieldset>
-					  <input type="text" name="fullname" placeholder="Full Name" />
-					  <br />
-					  <input type="text" name="subject" placeholder="Subject" />
-					  <br />
-					  <input type="text" name="phone" placeholder="Phone" />
-					  <br />
-					  <input type="text" name="emailid" placeholder="Email" />
-					  <br />
-					  <textarea rows="4" cols="20" name="comments" placeholder="Comments"></textarea>
-					  <br />
-					  <input type="submit" name="submit" value="Send" />
-					</fieldset>
-			</form>
-			<p><?php if(!empty($message)) echo $message; ?></p>
-		</div>
+        <div style="margin: 100px auto 0;width: 300px;">
+            <h3>Contact Form</h3>
+            <form name="form1" id="form1" action="" method="post">
+                <fieldset>
+                    <input type="text" name="fullname" placeholder="Full Name" />
+                    <br />
+                    <input type="text" name="subject" placeholder="Subject" />
+                    <br />
+                    <input type="text" name="phone" placeholder="Phone" />
+                    <br />
+                    <input type="text" name="emailid" placeholder="Email" />
+                    <br />
+                    <textarea rows="4" cols="20" name="comments" placeholder="Comments"></textarea>
+                    <br />
+                    <input type="submit" name="submit" value="Send" />
+                </fieldset>
+            </form>
+            <p><?php if(!empty($message)) echo $message; ?></p>
+        </div>
 
-</body>
+    </body>
 </html>
