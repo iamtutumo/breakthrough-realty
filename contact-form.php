@@ -34,7 +34,7 @@ Comments:	'.$_POST['comments'].'
     $mail->MsgHTML($message);
 
     // Send To
-    $mail->AddAddress("shrikarz@gmail.com", "Recipient Name"); // Where to send it - Recipient
+    $mail->AddAddress("sitemail@breakthroughgroup.in", "Recipient Name"); // Where to send it - Recipient
     $result = $mail->Send();		// Send!
     $message = $result ? 'Successfully Sent!' : 'Sending Failed!';
     unset($mail);
