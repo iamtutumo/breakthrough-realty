@@ -20,7 +20,7 @@ Comments:	'.$_POST['comments'].'
     $mail->SMTPAuth = true;         // Connection with the SMTP does require authorization
     $mail->SMTPSecure = "ssl";      // Connect using a TLS connection
     $mail->Host = "mail.breakthroughgroup.in";  //Gmail SMTP server address
-    $mail->Port = 587;  //Gmail SMTP port
+    $mail->Port = 465;  //Gmail SMTP port
     $mail->Encoding = '7bit';
 
     // Authentication
