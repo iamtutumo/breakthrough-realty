@@ -28,7 +28,7 @@ Comments:	'.$_POST['comments'].'
     $mail->Password   = "sitemail1945"; // Your Gmail password
 
     // Compose
-    $mail->SetFrom($_POST['emailid'], $_POST['fullname']);
+    //$mail->SetFrom($_POST['emailid'], $_POST['fullname']);
     $mail->AddReplyTo($_POST['emailid'], $_POST['fullname']);
     $mail->Subject = "New Contact Form Enquiry";      // Subject (which isn't required)
     $mail->MsgHTML($message);
