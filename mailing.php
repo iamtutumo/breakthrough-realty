@@ -7,8 +7,8 @@ $mail = new PHPMailer;
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 
-//$name = $_POST['name'];
-$name = 'sam';
+$name = $_POST['name'];
+$enq = $_POST['enq'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 
@@ -32,7 +32,7 @@ $mail->addReplyTo("$email");
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Here is the subject';
-$mail->Body    =  " $name wants to enquire about";
+$mail->Body    =  " $name wants to enquire about $enq ";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
