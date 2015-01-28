@@ -50,6 +50,4 @@ if(!$mail->send()) {
 } else {
     echo "We have recieved your message. We will get back to you in few days.";
 }
-
-}
 ?>
