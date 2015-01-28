@@ -31,8 +31,8 @@ $mail->addReplyTo("$email");
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Here is the subject';
-$mail->Body    =  " $name wants to enquire about $enq ";
+$mail->Subject = " $enq from $name";
+$mail->Body    =  "$message /n /n <b>Complete Details of this enquiry: /n lorem";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
