@@ -12,6 +12,8 @@ $enq = $_POST['enq'];
 $email = $_POST['email'];
 $number = $_POST['phone'];
 $message = $_POST['message'];
+
+date_default_timezone_set('Asia/Calcutta');
 $time = date("H:i:s Y-m-d");
 
 $mail->Host = 'mail.breakthroughgroup.in';  // Specify main and backup SMTP servers
