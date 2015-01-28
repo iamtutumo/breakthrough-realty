@@ -25,7 +25,7 @@ $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->From = 'sitemail@breakthroughgroup.in';
 $mail->FromName = 'BT mail';
-$mail->addAddress('shrikarz@gmail.com');     // Add a recipient
+$mail->addAddress('btgroup.companies@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 $mail->addReplyTo("$email");
 //$mail->addCC('cc@example.com');
@@ -49,5 +49,5 @@ if(!$mail->send()) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    echo 'Message has been sent';
+    echo "We have recieved your message. We will get back to you in few days.";
 }
