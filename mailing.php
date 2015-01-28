@@ -24,7 +24,7 @@ $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->From = 'sitemail@breakthroughgroup.in';
 $mail->FromName = 'BT mail';
-$mail->addAddress('btgroup.companies@gmail.com');     // Add a recipient
+$mail->addAddress('shrikarz@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 $mail->addReplyTo("$email");
 //$mail->addCC('cc@example.com');
