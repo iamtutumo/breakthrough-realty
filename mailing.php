@@ -12,7 +12,7 @@ $enq = $_POST['enq'];
 $email = $_POST['email'];
 $number = $_POST['phone'];
 $message = $_POST['message'];
-$time=time();
+$time= date("Y-m-d");
 
 $mail->Host = 'mail.breakthroughgroup.in';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
