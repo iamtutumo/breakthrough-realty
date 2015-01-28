@@ -32,7 +32,12 @@ $mail->addReplyTo("$email");
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = " $enq from $name";
-$mail->Body    =  "$message /n /n <b>Complete Details of this enquiry: /n lorem";
+$mail->Body    =  "$message <br><br> <b>Complete Details of this enquiry:</b> <br>
+<b>Name:</b>$name
+<b>Email:</b>$email
+<b>Contact No:</b>$number
+<b>Enq Type:</b>$enq";
+
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
