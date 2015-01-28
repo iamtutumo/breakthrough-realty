@@ -1,4 +1,8 @@
-<?php $name = $_POST['name'];
+<?php
+require "phpmailer/class.phpmailer.php"; //include phpmailer class
+require "phpmailer/class.smtp.php";
+
+$name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $formcontent="From: $name \n Message: $message";
