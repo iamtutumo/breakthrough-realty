@@ -6,6 +6,12 @@ $mail = new PHPMailer;
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
+
+//$name = $_POST['name'];
+$name = 'sam';
+$email = $_POST['email'];
+$message = $_POST['message'];
+
 $mail->Host = 'mail.breakthroughgroup.in';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'sitemail@breakthroughgroup.in';                 // SMTP username
@@ -26,7 +32,7 @@ $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+$mail->Body    =  $name 'wants to enquire about';
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {

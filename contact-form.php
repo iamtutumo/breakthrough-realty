@@ -9,7 +9,7 @@ Phone:	'.$_POST['phone'].'<br />
 Email:	'.$_POST['emailid'].'<br />
 Comments:	'.$_POST['comments'].'
 ';
-    require "phpmailer/class.phpmailer.php"
+    require "phpmailer/class.phpmailer.php",
     require "phpmailer/class.smtp.php"
 
     // Instantiate Class
