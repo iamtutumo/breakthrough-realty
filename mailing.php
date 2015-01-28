@@ -12,7 +12,7 @@ $enq = $_POST['enq'];
 $email = $_POST['email'];
 $number = $_POST['phone'];
 $message = $_POST['message'];
-$time = date("Y-m-d");
+$time = date("H:i:s Y-m-d");
 
 $mail->Host = 'mail.breakthroughgroup.in';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -38,7 +38,8 @@ $mail->Body    =  "$message <br><br> <b>Complete Details of this enquiry:</b> <b
 <b>Name: </b>$name<br>
 <b>Email: </b>$email<br>
 <b>Contact No: </b>$phone<br>
-<b>Enq Type: </b>$enq<br> $time";
+<b>Enq Type: </b>$enq<br>
+<b>Sent on: </b>$time";
 
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
