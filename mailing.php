@@ -20,7 +20,7 @@ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, 
 $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->From = 'sitemail@breakthroughgroup.in';
-$mail->FromName = 'Mailer';
+$mail->FromName = $name;
 $mail->addAddress('shrikarz@gmail.com', 'Joe User');     // Add a recipient
 $mail->addAddress('ellen@example.com');               // Name is optional
 $mail->addReplyTo('info@example.com', 'Information');
@@ -32,7 +32,7 @@ $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Here is the subject';
-$mail->Body    =  ' $name wants to enquire about';
+$mail->Body    =  " $name wants to enquire about";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
