@@ -10,7 +10,9 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $name = $_POST['name'];
 $enq = $_POST['enq'];
 $email = $_POST['email'];
+$number = $_POST['phone'];
 $message = $_POST['message'];
+$time=time();
 
 $mail->Host = 'mail.breakthroughgroup.in';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -33,10 +35,11 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = " $enq from $name";
 $mail->Body    =  "$message <br><br> <b>Complete Details of this enquiry:</b> <br>
-<b>Name:</b>$name
-<b>Email:</b>$email
-<b>Contact No:</b>$number
-<b>Enq Type:</b>$enq";
+<b>Name: </b>$name<br>
+<b>Email: </b>$email<br>
+<b>Contact No: </b>$phone<br>
+<b>Enq Type: </b>$enq<br>"
+    $time;
 
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
