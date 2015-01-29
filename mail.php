@@ -5,7 +5,7 @@ $mail = new PHPMailer;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Construct the Google verification API request link.
     $params = array();
-    $params['secret'] = 'Your secret key here.'; // Secret key
+    $params['secret'] = '6Le0-gATAAAAAD_45xlK9MFomIdMlqSkQyqGNcbj'; // Secret key
     if (!empty($_POST) && isset($_POST['g-recaptcha-response'])) {
         $params['response'] = urlencode($_POST['g-recaptcha-response']);
     }
