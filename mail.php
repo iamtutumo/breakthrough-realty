@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "We have recieved your message. We will get back to you in few days.";
         }
     } else {
-        echo "Please verify that you're not a robot and try again."
+        echo "Please verify that you're not a robot and try again.";
     }
 }
 ?>
