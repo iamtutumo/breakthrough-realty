@@ -73,7 +73,7 @@ $(document).ready(function(){
         });
     });
     $('#resp').click(function(){
-        console.log($('#g-recaptcha-response').attr('name'));
+        console.log($('#g-recaptcha-response').val());
     });
 
 //dom ready ends
