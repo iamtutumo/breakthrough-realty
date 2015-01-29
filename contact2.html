@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootflat.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.min.css">
+
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery.smooth-scroll.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
+    <body>
+        <div class="contact-wrapper">
+            <div class="container-fluid">
+                <div class="row navigation">
+                    <div class="col-md-5">
+                        <img src="img/BTlogo1.png" alt="" class="logo-main">
+                    </div>
+                    <div class="col-md-7">
+                        <ul class="nav-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#about-row">About Us</a></li>
+                            <li><a href="director.html">Founder</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="#" class="active">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container actual-contact">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-7">
+                            <form id="ajax-contact" method="post" action="mail.php">
+                                <div class="form-group">
+                                    <label for="query">Enquiry Type:</label>
+                                    <select class="form-control" id="query" name="enq">
+                                        <option>Career enquiry</option>
+                                        <option>Billing Enquiry</option>
+                                        <option>Media Enquiry</option>
+                                        <option>Partnership Enquiry</option>
+                                        <option>Sales Enquiry</option>
+                                        <option>Support Enquiry</option>
+                                        <option>Website Enquiry</option>
+                                        <option>Website Feedback</option>
+                                        <option>Other Enquiry</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required class="form-control input-sm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Company:</label>
+                                    <input type="text" id="company" name="company" required class="form-control input-sm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required class="form-control input-sm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Phone:</label>
+                                    <input type="text" id="phone" name="phone" required class="form-control input-sm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" required class="form-control input-sm"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <div class="g-recaptcha" data-sitekey="6Le0-gATAAAAALxsFuaYwVTfLxx6v7651ByMBqq1"></div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-sm btn-warning">Submit Enquiry</button>
+                                </div>
+                            </form>
+                        </div>
+                                <button class="btn btn-primary btn-sm" id="resp">Captcha Response</button>
+                        <div class="col-md-5 contact-details text-right">
+                            <p class="h3 cont-header">Email us at:</p>
+                            <h5 class="email-head">For subscription related concerns:</h5>
+                            <h4>subs@breakthroughgroup.in</h4>
+                            <h5 class="email-head">For other information:</h5>
+                            <h4>info@breakthroughgroup.in</h4>
+                        </div>
+                    </div>
+                </div>
+                <div id="form-messages" style="height:30px; color: #333;" class="col-md-8 col-md-push-1 h4"></div>
+            </div>
+            <div class="container-fluid footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 copy-r">
+                            <h4>copyright</h4>
+                            <p class="footer-name">
+                                <span class="name">breakthrough</span> <br> <span class="rest">group of companies</span>
+                            </p>
+                            <p style="color:#777">&copy;2014 copyright</p>
+                            <p style="color:#777; text-transform: none;">In association with <a href="http://www.prtham.com">Pratham Events & PR</a></p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Important Links</h4>
+                            <p style="margin-top:16px; font-size:15px;" class="hide" >Important Links</p>
+                            <p class="links">
+                                • <a href="projects.html"><span>E-Magazine</span></a> <br>
+                                • <a href="contact.html"><span>Careers</span></a> <br>
+                                • <a href="#about-row"><span>About</span></a> <br>
+                                • <a href="contact.html"><span>Contact</span></a> <br>
+                            </p>
+                        </div>
+                        <div class="col-md-4 misc-text">
+                            <h4>Advertise in Breakthrough Realty</h4>
+                            <p style="margin-top:16px; font-size:15px;" class="hide" >Important Links</p>
+                            <p class="links">
+                                Advertising in Breakthrough Realty is always a wonderful experience. <a href="contact.html">Click to apply for Ads</a> to earn special client privileges, a bond that lasts and an assured way to reach millions of subscribers each year!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
