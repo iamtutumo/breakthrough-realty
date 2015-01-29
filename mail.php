@@ -79,7 +79,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "We have recieved your message. We will get back to you in few days.";
         }
     } else {
-        echo '<span class=',"alert alert-danger",'>Please confirm that you are not a robot before submitting.</span>';
+        //echo '<span class=',"alert alert-danger",'>Please confirm that you are not a robot before submitting.</span>';
+        echo "<h1>Hello</h1>";
     }
 }
 ?>
