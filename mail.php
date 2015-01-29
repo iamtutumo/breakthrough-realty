@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } else {
         //echo '<span class=',"alert alert-danger",'>Please confirm that you are not a robot before submitting.</span>';
-        echo "<h1>Hello</h1>";
+        echo "<span>Hello</span>";
     }
 }
 ?>
