@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $mail->From = 'sitemail@breakthroughgroup.in';
         $mail->FromName = 'BT mail';
-        $mail->addAddress('shrikarzgmail.com');     // Add a recipient
+        $mail->addAddress('btgroup.companies.com');     // Add a recipient
         //$mail->addAddress('ellen@example.com');               // Name is optional
         $mail->addReplyTo("$email");
         //$mail->addCC('cc@example.com');
