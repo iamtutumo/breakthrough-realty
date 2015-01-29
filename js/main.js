@@ -72,5 +72,9 @@ $(document).ready(function(){
             }
         });
     });
+    $('#resp').click(function(){
+        console.log($('#g-recaptcha-response').attr('name'););
+    });
 
+//dom ready ends
 });
