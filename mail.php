@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         if(!$mail->send()) {
-            echo 'Message could not be sent.';
+            echo 'Message could not be sent. /n';
             echo 'Mailer Error: ' . $mail->ErrorInfo;
         } else {
             echo "We have recieved your message. We will get back to you in few days.";
