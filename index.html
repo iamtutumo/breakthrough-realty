@@ -11,27 +11,38 @@
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.min.css">
 
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/jquery-2.1.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.smooth-scroll.js"></script>
     </head>
     <body>
         <div id="wrapper">
             <div class="container-fluid">
-                <div class="row navigation">
-                    <div class="col-md-5">
-                        <img src="img/BTlogo1.png" alt="" class="logo-main">
-                    </div>
-                    <div class="col-md-7">
-                        <ul class="nav-list">
-                            <li><a href="#about-row">About Us</a></li>
-                            <li><a href="director.html">Founder</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#"><img src="img/BTlogo1.png" alt=""></a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#about-row">About Us</a></li>
+                                <li><a href="director.html">Founder</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
 
                 <div class="row cover-image">
                     <div class="col-md-6 col-md-offset-3 logotext text-center">
@@ -160,7 +171,7 @@
                         <h4 class="modal-title" id="myModalLabel"></h4>
                     </div>
                     <div class="modal-body text-center">
-                      <h3>Breakthrough Realty <br> is coming soon.</h3>
+                        <h3>Breakthrough Realty <br> is coming soon.</h3>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="hide btn btn-default" data-dismiss="modal">Close</button>
